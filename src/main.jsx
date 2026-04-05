@@ -74,6 +74,10 @@ const router = createBrowserRouter([
         HydrateFallback: useLoading,
         Component: PostDetails,
       },
+      {
+        path: "*",
+        element: <p>404 Page Not Found!</p>,
+      },
     ],
   },
 ]);
