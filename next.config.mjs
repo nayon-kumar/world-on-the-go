@@ -2,6 +2,9 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
+  images: {
+    remotePatterns: [new URL("https://picsum.photos/**")],
+  },
 };
 
 export default nextConfig;
