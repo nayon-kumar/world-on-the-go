@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pathName = usePathname();
-  console.log(pathName);
   const links = (
     <>
       <li>
@@ -34,6 +33,22 @@ const Navbar = () => {
           href="/users"
         >
           Users
+        </Link>
+      </li>
+      <li>
+        <Link
+          className={`${pathName === "/todos" ? "active" : ""}`}
+          href="/todos"
+        >
+          Todos
+        </Link>
+      </li>
+      <li>
+        <Link
+          className={`${pathName === "/posts" ? "active" : ""}`}
+          href="/posts"
+        >
+          Posts
         </Link>
       </li>
     </>
