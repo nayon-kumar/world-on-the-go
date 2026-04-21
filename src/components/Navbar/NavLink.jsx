@@ -17,6 +17,14 @@ const NavLink = () => {
       </li>
       <li>
         <Link
+          className={`${pathName === "/products" ? "text-red-500" : ""}`}
+          href={`/products`}
+        >
+          Products
+        </Link>
+      </li>
+      <li>
+        <Link
           className={`${pathName === "/posts" ? "text-red-500" : ""}`}
           href={`/posts`}
         >
