@@ -1,7 +1,6 @@
 import { CircleDollar } from "@gravity-ui/icons";
 import { Card, Link } from "@heroui/react";
 const TaskCard = ({ task }) => {
-  console.log(task);
   return (
     <Card className="border">
       <CircleDollar
