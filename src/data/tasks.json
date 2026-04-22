@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "title": "Design homepage UI",
+      "description": "Create responsive homepage layout using HTML, CSS, and Tailwind",
+      "status": "pending",
+      "priority": "high",
+      "category": "frontend",
+      "dueDate": "2026-05-01"
+    },
+    {
+      "id": 2,
+      "title": "Build REST API",
+      "description": "Develop CRUD API for tasks using Node.js and Express",
+      "status": "in-progress",
+      "priority": "high",
+      "category": "backend",
+      "dueDate": "2026-05-03"
+    },
+    {
+      "id": 3,
+      "title": "Fix login bug",
+      "description": "Resolve authentication issue in login form",
+      "status": "pending",
+      "priority": "medium",
+      "category": "bug",
+      "dueDate": "2026-04-28"
+    },
+    {
+      "id": 4,
+      "title": "Write documentation",
+      "description": "Prepare project README and API documentation",
+      "status": "completed",
+      "priority": "low",
+      "category": "documentation",
+      "dueDate": "2026-04-20"
+    },
+    {
+      "id": 5,
+      "title": "Optimize performance",
+      "description": "Improve page load speed and reduce bundle size",
+      "status": "in-progress",
+      "priority": "medium",
+      "category": "optimization",
+      "dueDate": "2026-05-05"
+    },
+    {
+      "id": 6,
+      "title": "Add dark mode",
+      "description": "Implement dark/light theme toggle",
+      "status": "pending",
+      "priority": "low",
+      "category": "feature",
+      "dueDate": "2026-05-07"
+    }
+  ]
