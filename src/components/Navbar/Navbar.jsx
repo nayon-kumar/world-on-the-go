@@ -1,4 +1,5 @@
 import { Link, Button } from "@heroui/react";
+import ToggleBtn from "./ToggleBtn";
 
 const Navbar = () => {
   return (
@@ -15,6 +16,9 @@ const Navbar = () => {
             <Link href="/tasks">Tasks</Link>
           </li>
         </ul>
+        <div>
+          <ToggleBtn />
+        </div>
       </header>
     </nav>
   );
