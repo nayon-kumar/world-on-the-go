@@ -1,9 +1,8 @@
+import { updateUser } from "@/app/lib/actions";
 import { getUserByID } from "@/app/lib/data";
 import { FloppyDisk } from "@gravity-ui/icons";
 import {
   Button,
-  Description,
-  FieldError,
   FieldGroup,
   Fieldset,
   Form,
@@ -17,40 +16,44 @@ const EditPage = async ({ params }) => {
   const { id } = await params;
   const user = await getUserByID(id);
 
+  const updataUserWraper = async (formData) => {
+    "use server";
+    return updateUser(id, formData);
+  };
+
   return (
     <div>
       <p>Editing user: {user.name}</p>
       <div className="mt-4">
-        <Form className="w-full max-w-96">
+        <Form action={updataUserWraper} className="w-full max-w-96">
           <Fieldset>
             <FieldGroup>
-              <TextField isRequired name="name">
+              <TextField defaultValue={user?.name} isRequired name="name">
                 <Label>Name</Label>
                 <Input placeholder="John Doe" />
-                <FieldError />
               </TextField>
-              <TextField isRequired name="email" type="email">
+              <TextField
+                isRequired
+                defaultValue={user?.email}
+                name="email"
+                type="email"
+              >
                 <Label>Email</Label>
                 <Input placeholder="john@example.com" />
-                <FieldError />
               </TextField>
-              <TextField isRequired name="bio">
+              <TextField isRequired defaultValue={user?.age} name="age">
                 <Label>Age</Label>
-                <TextArea placeholder="Tell us about yourself..." />
-                <Description>Minimum 10 characters</Description>
-                <FieldError />
+                <Input placeholder="Your age" />
               </TextField>
-              <TextField isRequired name="bio">
+              <TextField isRequired defaultValue={user?.role} name="role">
                 <Label>Role</Label>
-                <TextArea placeholder="Tell us about yourself..." />
-                <Description>Minimum 10 characters</Description>
-                <FieldError />
+                <Input placeholder="Your role" />
               </TextField>
             </FieldGroup>
             <Fieldset.Actions>
               <Button type="submit">
                 <FloppyDisk />
-                Edit
+                Update
               </Button>
               <Button type="reset" variant="secondary">
                 Cancel
